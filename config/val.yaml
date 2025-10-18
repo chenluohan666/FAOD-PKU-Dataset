@@ -1,0 +1,16 @@
+defaults:
+  - general
+  - dataset: ???
+  - model: rnndet
+  - _self_
+
+checkpoint: null  # 修改为null，GT模式不需要checkpoint
+use_test_set: True
+hardware:
+  num_workers:
+    eval: 6
+  gpus: 0 # GPU idx (multi-gpu not supported for validation)
+batch_size:
+  eval: 4
+training:
+  precision: 16

@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Generated visualization outputs
+gt/
+predictions/
+pre_gt/
+
+# Wandb logs
+wandb/
+
+# Checkpoints and model weights
+*.ckpt
+*.pth
+*.pt
+checkpoints/
+
+# Logs
+*.log
+logs/
+
+# Dataset (too large to upload)
+# Uncomment if you don't want to upload datasets
+# *.h5
+# *.npz
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Hydra outputs
+outputs/
+multirun/
+
+# Training artifacts
+train_ddp_process_*.log
+
