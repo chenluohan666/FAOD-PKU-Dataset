@@ -178,8 +178,54 @@ Initial commit with PKU dataset configuration and GT visualization support
 
 ---
 
+---
+
+## 📦 DSEC数据集配置 (新增)
+
+### 配置文件修改
+**文件**: `config/dataset/dsec.yaml`
+
+**修改内容**:
+```yaml
+path: 'E:/dataset/freq_1_2/freq_1_1'  # DSEC数据集路径
+```
+
+### 新建文件
+1. **`demo_dsec.py`**: 专门用于DSEC数据集的GT可视化脚本
+   - 默认模式：`mode = 'gt'`
+   - 测试序列路径：`E:/dataset/freq_1_2/freq_1_1/test/zurich_city_11_a`
+   - 输出目录：`gt_dsec/images/` 和 `gt_dsec/video/`
+
+2. **`README_DSEC.md`**: DSEC数据集使用说明文档
+   - 包含完整的运行命令
+   - 数据集目录结构说明
+   - 与PKU数据集的对比
+
+### 运行命令
+```bash
+# DSEC Ground Truth可视化
+python demo_dsec.py dataset=dsec +experiment/dsec=base.yaml
+
+# 带路径参数
+python demo_dsec.py dataset=dsec dataset.path=E:/dataset/freq_1_2/freq_1_1 +experiment/dsec=base.yaml
+```
+
+### DSEC vs PKU对比
+
+| 特性 | PKU数据集 | DSEC数据集 |
+|------|----------|-----------|
+| 脚本 | `demo.py` | `demo_dsec.py` |
+| 路径 | `E:/dataset/freq_1_1/freq_1_1` | `E:/dataset/freq_1_2/freq_1_1` |
+| 输出 | `gt/` | `gt_dsec/` |
+| 分辨率 | 260x346 | 480x640 |
+| 序列长度 | 11 | 5 |
+
+---
+
 ## 🔄 未来工作
 
+- [x] 配置PKU数据集并实现GT可视化
+- [x] 配置DSEC数据集并实现GT可视化
 - [ ] 下载并测试预训练权重
 - [ ] 尝试训练自己的模型
 - [ ] 测试其他数据集序列
@@ -189,4 +235,5 @@ Initial commit with PKU dataset configuration and GT visualization support
 
 **修改人员**: AI Assistant (Claude)
 **用户**: Ross Chen
+**最后更新**: 2025年10月18日
 

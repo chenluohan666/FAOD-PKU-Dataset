@@ -1,7 +1,7 @@
 defaults:
   - base
 
-path: 'E:\dataset\freq_1_1'
+path: 'E:/dataset/freq_1_1/freq_1_1'
 name: pku_fusion
 ev_repr_name: 'stacked_histogram_dt=50_nbins=10'
 sequence_length: 11

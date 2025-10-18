@@ -34,7 +34,9 @@ env/
 
 # Generated visualization outputs
 gt/
+gt_dsec/
 predictions/
+predictions_dsec/
 pre_gt/
 
 # Wandb logs
